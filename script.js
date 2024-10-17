@@ -34,7 +34,7 @@ function roomatesGenerateInput() {
         roomatesDiv.appendChild(rowDiv);
 
         // Aggiungere il pulsante "Stanze"
-        buttonFormRooms.innerHTML = '<button class="btn btn-success mt-4" onclick="saveRoomates()">Stanze</button>';
+        buttonFormRooms.innerHTML = '<button onclick="saveRoomates()">Stanze</button>';
     } else {
         roomatesDiv.innerHTML = '<p class="text-danger">Per favore, inserisci un numero valido di coinquilini.</p>';
     }
