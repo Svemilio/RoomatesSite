@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <head>
+        <link rel = "stylesheet" href="style.css">
+    </head>
+    <title>Form</title>
+    <body class="form">
+        <a href="index.html">
+            <h1 class="title"  >Roomates</h1>
+        </a>
+        <div class="form-container">
+            <form>
+                <label for="numRooms" >Inserisci il numero di stanze: </label>
+                <input type ="number" name="numRooms" id="numRooms" min="1" placeholder="Inserisci un numero" required><br>
+                <button class="rooms" type="button" onclick="roomsGenerate()">Prosegui</button>
+            </form>
+        </div>
+        <div id="rooms"></div>
+        <div id="button"></div>
+        <div id="result"></div>
+        <script src="script.js"></script>
+    </body>
+</html>

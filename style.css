@@ -1,0 +1,132 @@
+body {
+    background-color: #6BA368;
+}
+
+h1.title {
+
+    margin-top: 10%;
+    color: white;
+    text-align: center;
+    font-size: 46px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+
+#feauteres {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+#feauteres div {
+    justify-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+h3.feauteres {
+    color: #6BA368;
+    text-align: center;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+
+a.index {
+    border-radius: 8px; /* Rende gli angoli del div arrotondati */
+    background-color: white;
+    position: relative; /* Assicura che l'ombra sia relativa all'elemento */
+    z-index: 1; /* Mantiene il contenuto sopra l'ombra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra con offset, sfocatura e opacità */
+    padding: 20px; /* Padding interno per dare spazio all'ombra */
+}
+
+label {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+
+button {
+    border-radius: 8px;
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    color: #6BA368;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.form p {
+    color: #6BA368;
+    font-weight: bold;
+   
+}
+body.form {
+    display: flex;                
+    flex-direction: column;     
+    align-items: center;         
+    justify-content: center; 
+}
+
+.form-container {
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+    height: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#rooms {
+    padding: 30px;
+}
+
+#result table {
+    width: 100%; /* Imposta la larghezza della tabella al 100% del contenitore */
+}
+
+#result th {
+    width: 50%;
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+    color:#6BA368; ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 50%;
+}
+#result {
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#result td {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
+}

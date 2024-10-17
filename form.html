@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head> 
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <title>Form</title>
+    <body class="form">
+        <a href="index.html">
+            <h1 class="title" href="index.html" >Roomates</h1>
+        </a>
+    <div class="form-container">
+        <form class = "form">
+            <label for="numCoinquilini" >Inserisci il numero di coinquilini </label><br><br>
+            <input type ="number" name="roomatesCounter" id="roomatesCounter" min="1" placeholder="Inserisci un numero" required><br><br><br>
+            <button type="button" onclick="roomatesGenerateInput()">Prosegui</button>
+        </form>
+    </div>
+        <div id="roomates"></div>
+
+        <div id="rooms"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
