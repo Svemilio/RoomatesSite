@@ -1,31 +1,45 @@
 
 function roomatesGenerateInput() {
-    
     const roomatesCounter = document.getElementById('roomatesCounter').value;
     const roomatesDiv = document.getElementById('roomates');
     const buttonFormRooms = document.getElementById('rooms');
 
+    // Reset dei contenuti
     roomatesDiv.innerHTML = '';
+    buttonFormRooms.innerHTML = '';
 
     if (roomatesCounter > 0) {
-        roomatesDiv.innerHTML = '<h3>Coinquilini</h3>';
+        roomatesDiv.innerHTML = '<h3 class="text-center">Coinquilini</h3>';
+        
+        // Creare una riga di Bootstrap
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'row g-3';
+
         for (let i = 1; i <= roomatesCounter; i++) {
-            
+            const colDiv = document.createElement('div');
+            colDiv.className = 'col-12 col-md-6';
+
             const input = document.createElement('input');
             input.type = 'text';
             input.name = 'coinquilino' + i;
             input.id = 'coinquilino' + i;
             input.placeholder = 'Nome coinquilino ' + i;
-            input.required;
+            input.className = 'form-control';  // Classe Bootstrap
+            input.required = true;
 
-            roomatesDiv.appendChild(input);
+            colDiv.appendChild(input);
+            rowDiv.appendChild(colDiv);
         }
-    } else {
-        roomatesDiv.innerHTML = '<p>Per favore, inserisci un numero valido di coinquilini.</p>';
-    }
-    buttonFormRooms.innerHTML = '<button onclick="saveRoomates()">Stanze</button>';
 
+        roomatesDiv.appendChild(rowDiv);
+
+        // Aggiungere il pulsante "Stanze"
+        buttonFormRooms.innerHTML = '<button class="btn btn-success mt-4" onclick="saveRoomates()">Stanze</button>';
+    } else {
+        roomatesDiv.innerHTML = '<p class="text-danger">Per favore, inserisci un numero valido di coinquilini.</p>';
+    }
 }
+
 
 function roomsGenerate() {
     
@@ -33,18 +47,32 @@ function roomsGenerate() {
     const roomsDiv = document.getElementById('rooms');
     const buttonGenerate = document.getElementById('button');
 
+    roomsDiv.innerHTML = '';
+
     if (numRooms> 0) {
         roomsDiv.innerHTML = '<h3>Stanze</h3>';
+
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'row g-3';
+
         for (let i = 1; i <= numRooms; i++) {
+            
+            const colDiv = document.createElement('div');
+            colDiv.className = 'col-12 col-md-6';
             
             const input = document.createElement('input');
             input.type = 'text';
             input.name = 'room' + i;
             input.id = 'room' + i;
             input.placeholder = 'Nome stanza' + i;
-
-            roomsDiv.appendChild(input);
+            input.className = 'form-control';  // Classe Bootstrap
+            input.required = true;
+            
+            colDiv.append(input);
+            rowDiv.appendChild(colDiv);
+            
         }
+        roomsDiv.appendChild(rowDiv);
     } else {
         roomsDiv.innerHTML = '<p>Per favore, inserisci un numero valido di coinquilini.</p>';
     }

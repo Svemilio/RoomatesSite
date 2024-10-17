@@ -60,9 +60,10 @@ label {
 }
 
 button {
+    width: auto;
+    white-space: nowrap;
     border-radius: 8px;
     height: 40px;
-    width: 100px;
     text-align: center;
     color: #6BA368;
     font-weight: bold;
